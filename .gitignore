@@ -1,5 +1,11 @@
 build/
 
+# Image types
+.ppm 
+.jpeg
+.jpg 
+.png
+
 # Prerequisites
 *.d
 

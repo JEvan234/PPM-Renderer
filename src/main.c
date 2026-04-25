@@ -1,6 +1,6 @@
 // PPM Renderer in C
 #include <stdio.h>
-#include "shapes.h"
+#include "shapes.c"
 
 int main() {
 
@@ -23,7 +23,7 @@ int main() {
 
             square(&red, &blue, &green, 0, 150, 256, 106, i, j, 50, 195, 50);
             // All foreground objects here (lower takes priority)
-            right_triangle(&red, &blue, &green, 0, 0, 100, 50, i, j);
+            right_triangle(&red, &blue, &green, 0, 0, 70, i, j);
 
 
             printf("%d %d %d ", red, green, blue);

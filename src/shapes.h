@@ -10,6 +10,7 @@ void square(int *red, int *blue, int *green, int x, int y, int width, int height
     }
 }
 
+// Broken but looks cool (implement as new shape [sun or something])
 void right_triangle(int *red, int *blue, int *green, int x, int y, int width, int height, int i, int j) {
     if (i >= y && i <= y + height) {
         if (j >= x && j <= width - (i - x)) {

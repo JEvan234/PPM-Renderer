@@ -16,7 +16,6 @@ Included is a build script, which is useful when working with it constantly. The
 ```bash
 #!/bin/bash
 
-gcc /src/main -o /build/main
-/build/main > image.ppm
-pnmtopng build/image.ppm build/image.png
+gcc src/main.c -o build/main
+./build/main | pnmtopng > build/image.png
 ```

@@ -13,21 +13,17 @@ int main() {
 
 
     // loops for pixel generation, goes across row, then down a column (like a CRT)
+
+    // i = y axis, j = x axis
     for (int i = 0; i < image_height; i ++) {
         for (int j = 0; j < image_width; j ++) {
             int red = 50;
             int green = 150;
             int blue = 190;
 
-            // Loop to change colors mid image
-            if (i > 150) {
-                red = 50;
-                green = 150;
-                blue = 90;
-            }
-
-            // All foreground objects here
-            right_triangle(&red, &blue, &green, 0, 0, 50, 50, i, j);
+            square(&red, &blue, &green, 0, 150, 256, 106, i, j, 50, 195, 50);
+            // All foreground objects here (lower takes priority)
+            square(&red, &blue, &green, 0, 0, 50, 50, i, j, 255, 0, 0);
 
 
 

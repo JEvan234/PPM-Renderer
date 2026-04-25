@@ -1,11 +1,11 @@
 
 
-void square(int *red, int *blue, int *green, int x, int y, int width, int height, int i, int j) {
+void square(int *red, int *blue, int *green, int x, int y, int width, int height, int i, int j, int color_red, int color_green, int color_blue) {
     if (i >= y && i <= y + height) {
         if (j >= x && j <= x + width) {
-            *red = 255;
-            *blue = 0;
-            *green = 0;
+            *red = color_green;
+            *blue = color_blue;
+            *green = color_green;
         }
     }
 }

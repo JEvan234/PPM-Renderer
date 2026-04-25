@@ -1,5 +1,6 @@
 // PPM Renderer in C
 #include <stdio.h>
+#include "shapes.h"
 
 int main() {
 
@@ -14,10 +15,23 @@ int main() {
     // loops for pixel generation, goes across row, then down a column (like a CRT)
     for (int i = 0; i < image_height; i ++) {
         for (int j = 0; j < image_width; j ++) {
-            int red = 255;
-            int blue = 0;
-            int green = 125;
-            printf("%d %d %d ", red, blue, green);
+            int red = 50;
+            int green = 150;
+            int blue = 190;
+
+            // Loop to change colors mid image
+            if (i > 150) {
+                red = 50;
+                green = 150;
+                blue = 90;
+            }
+
+            // All foreground objects here
+            right_triangle(&red, &blue, &green, 0, 0, 50, 50, i, j);
+
+
+
+            printf("%d %d %d ", red, green, blue);
         }
         printf("\n");
     }
